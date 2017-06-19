@@ -1,0 +1,114 @@
+.slider {
+	position: relative;
+    width: 964px;    
+    height: 385px;    
+    margin: 15px auto 30px; 
+
+    @media @tablet-widths {width: 85vw;}
+
+    @media @mobil-widths {height: auto;}
+
+}
+
+.slider--works {
+    height: 650px;
+}
+
+.frame {
+    /**
+     * (optional) wrapper width, specifies width of the slider frame.
+     */
+    width: 964px;
+    height: 385px;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    
+
+    @media @tablet-widths {width: 85vw;}
+
+    @media @mobil-widths {height: auto;}
+	
+	.slides {
+		display: block;
+		width: 99999px;
+		height: 100%;
+	    li {
+	        position: relative;
+	        display: inline-block;
+	        /**
+	         * (optional) if the content inside the slide element has a defined size.
+	         */
+	        width: 964px;
+
+	        @media @tablet-widths {width: 85vw;}
+
+    		
+	    }
+	}
+}
+
+.frame--works {
+    height: 650px;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    cursor: pointer;
+
+    @media @mobil-widths {top: 30%;}
+}
+
+.next {
+    right: -50px;
+    @media @tablet-widths {right: -30px; }
+
+}
+
+.prev {
+    left: -50px;
+    @media @tablet-widths {left: -30px;}
+}
+
+.next svg, .prev svg {
+    width: 40px;
+
+    @media @mobil-widths {width: 30px;}
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    margin-left: -150px;
+    z-index: 200;
+    font-size: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 10px;
+        vertical-align: top;
+        background-color: #ffffff;        
+        border-radius: 50%;
+        cursor: pointer;
+
+        @media @mobil-widths {
+			width: 20px;
+        	height: 20px;
+        }
+    }
+
+    li.active {
+    	background-color: #a1d6f3;
+	}
+}

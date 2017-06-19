@@ -1,0 +1,79 @@
+.benefit {
+	.container-fluid();
+	background: url("../img/bg-benefit.svg") top center no-repeat;
+	background-size: 70%;
+	text-align: center;
+
+	&--one { background: url("../img/benefit-one.png")  no-repeat;}
+	&--two { background: url("../img/benefit-two.png")  no-repeat;}
+	&--three { background: url("../img/benefit-three.png")  no-repeat;}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 26%;
+		padding-top: 190px;
+		margin: 3%;
+		background-size: 60%;
+		background-position: center 30px;
+	}
+
+	&__title {
+		.cooper(30px);
+		color: @color-red;
+		height: 60px;
+
+		i {
+			display: block;
+			font-size: 20px;
+		}
+	}
+
+	&__subtitle {
+		.roboto-bold(16px);
+		padding: 10px 20px;
+	}
+}
+
+@media @tablet-widths {
+	.benefit {
+		&__item  {
+			padding-top: 20%;
+		}
+
+		&__title {
+			font-size: 22px;
+			height: 44px;
+
+			i {		
+				font-size: 16px;
+			}
+		}
+
+		&__subtitle {
+			font-size: 14px;
+		}
+	}
+}
+
+@media @mobil-widths {
+	.benefit {
+		width: 300px;
+		margin: 0 auto;
+		background-size: auto;
+
+
+		&__item  {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			padding-top: 150px;
+			background-size: 40%;
+		}
+
+		&__subtitle {
+			width: 100%;
+			padding: 10px 0;
+		}
+	}
+}

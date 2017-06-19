@@ -1,0 +1,30 @@
+.main-title {
+	display: block;
+	width: 570px;
+	p {
+		.roboto(21px);
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+}
+
+@media @tablet-widths {
+	.main-title {
+		padding-top: 30px;
+		margin: 0 auto;
+	}
+}
+
+@media @mobil-widths {
+	.main-title {
+		width: 100%;
+		padding-top: 15px;
+		h1 { display: none;}
+		p {
+			font-size: 14px;
+			line-height: 1.3;
+		}
+		
+	}
+}

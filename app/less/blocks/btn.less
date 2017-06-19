@@ -1,18 +1,28 @@
 .btn {
-	display: inline-block;
+	display: inline-block;	
 	cursor: pointer;
 	outline: none;
 	width: auto;
 	color: @color-white;
-	.roboto-bold(16px);
-	line-height: 1.1;	
+	.roboto-bold(15px);
+	line-height: 1;	
 	text-transform: uppercase;
-	padding: 17px 50px;
-	margin: 16px;
+	text-align: center;
+	padding: 13px 20px;	
 	border: 1px solid rgb(220, 9, 9);
 	border-radius: 3px;
 	background-color: #e0325e;
 	background-image: linear-gradient(to top, #b72952 0%, #f33768 85%, #f04b8c 100% ) ;
     box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.5), 1px 3px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn-12 {
+	font-size: 12px;
+	line-height: 10px;
+	padding: 10px;
+}
+
+.btn:hover, .btn:active, .btn:active {
+	background-image: linear-gradient(to bottom, #b72952 0%, #f33768 65%, #f04b8c 100% ) ;
 }
 

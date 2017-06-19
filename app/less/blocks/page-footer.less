@@ -1,11 +1,16 @@
 .page-footer-bg {
 	display: block;
 	width: 100%;
-	background-color: #fbfaf5;
-	border-top: 2px solid #f5f2e9;
+	background-color: #43ace7;
+	background-image: linear-gradient(to top, rgba(0, 83, 130, 0.5) 0%, rgba(255, 255, 255, 0.1) 100% ) ;
+	padding-top: 40px;
 	height: @height-footer;
 	margin-top: -@height-footer;
+	box-shadow: inset 0 3px 15px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
 }
+
+
 
 .page-footer {
 	.container-fluid();
@@ -13,27 +18,344 @@
 	position: relative;
 	z-index: 1;
 
+
+	&__block-left {
+		display: block;
+		float: left;
+		width: 300px;
+		text-align: left;
+	}
+
 	&__logo {
+		display: block;
+		margin-bottom: 10px;		 
+		width: 265px;
+		height: 71px;
+		
+		img {width: 100%}
+	}
+
+	&__logo-subtitle {
+		.roboto(10px);
+		padding-left: 5px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	&__btn {
 		display: inline-block;
+		margin: 50px 0;
+		width: 250px;
+	}
+
+	&__comment {
+		display: block;
+		width: 300px;
 		position: absolute;
-		z-index: 10;
-		top: -3.5rem;
-		left: 50%;
-		margin-left: -3.125rem;
-		width: 6.25rem;
-		height: 8.5rem;
+		bottom: 0px;
+		left: 20px;
+		color: @color-lightblue;
+
+		p, a {
+			display: block;
+			.roboto(12px);
+			line-height: 24px;
+			color: inherit;
+		}
+
+		a { text-decoration: underline;	}
+		a:hover { font-size: 14px;}
+	}
+
+
+	&__block-center {
+		display: block;
+		float: left;
+		width: ~"calc(100% - 570px)";
+
+		.block-form {
+			padding: 20px;
+			height: auto;
+
+			&__user-input, &__btn {
+				width: 45%;
+				margin: 0;
+			}
+
+			&__user-input {
+				margin-right: 5%;
+			}
+		}
+
+		.block-form__title {
+			font-size: 15px;
+			text-transform: none;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__nav {
+		display: block;
+		width: 100%;
+		padding-top: 10px;		
+	}
+
+	&__nav-collumn {
+		display: inline-block;
+		vertical-align: top;
+		width: 52%;
+
+		ul {
+			list-style: none;
+
+			li a {
+				.roboto(12px);
+				line-height: 24px;
+				color: @color-white;
+				text-decoration: underline;
+				white-space: nowrap;
+			}
+
+			li:hover a, li:active a, li.active a {
+				color: @color-gray;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__nav-collumn:first-child {
+		width: 45%;
+	}
+
+	&__block-right {
+		display: block;
+		float: right;
+		width: 270px;
+		text-align: right;
+	}
+
+	&__block-contact {
+		background: url("../img/ico-phone-light.png") 25px 15px no-repeat;
+		padding-left: 60px;
+		.block-contact-phone__number {
+			color: @color-white;
+			padding-bottom: 5px;
+		}
+
+		.block-contact-phone__text {
+			color: @color-lightblue;
+			font-size: 12px;
+			text-transform: none;
+			text-align: center;
+
+		}
+	}
+
+	&__block-address {
+		background: url("../img/ico-map-light.png") 45px 5px no-repeat;
+		padding-left: 75px;
+		text-align: left;
+		margin-top: 20px;
+
+		p {
+			color: @color-white;
+		}
+
+		p:first-child {
+			font-size: 13px;
+		}
+	}
+
+	&__block-social {
+		padding: 20px;
+		padding-left: 60px;
+		text-align: left;		
+	}
+}
+
+
+@media @desktop-widths-only {
+	.page-footer__block-social {
+		.ico_uscl-spoiler:before {
+			content: "Поделиться...";
+			.roboto(12px);
+			font-weight: normal;
+			text-transform: uppercase;
+			text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.55);
+		}
+
+		.uSocial-Share .uscl-bar.uscl-size32 .ico_uscl {
+			width: auto;
+			height: auto;
+			padding: 0 20px;
+			line-height: 25px;
+			border: 1px solid #ffffff;
+    		background-color: #43ace7;	
+    		margin: 10px 0 0;		
+		}
+
+		.uSocial-Share .uscl-bar.uscl-size32 .ico_uscl:hover {
+			background-color: #7ccaf9;
+		}
+
+		#uSocial-popup .uscl-popup-dialog {
+			top: auto;
+			bottom: -100px;
+		}
+	}
+}
+
+.social {
+	display: block;
+	.roboto(12px);
+	color: @color-white;
+	text-decoration: underline;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 40px;
+	margin-bottom: 5px;
+	background: url("../img/ico-social.png") 0 0 no-repeat;
+
+	&--vk {
+		background-position: 0 0;
+	}
+
+	&--ok {
+		background-position: 0 -33px;
+	}
+
+	&--inst {
+		background-position: 0 -67px;
+	}
+}
+
+.social:hover {
+	color: @color-gray;
+	font-size: 14px;
+}
+
+.uscl-popup-footer {
+	display: none;
+}
+
+@media @tablet-widths {
+	.page-footer {
+		
+		&__block-center {
+			float: none;
+			width: ~"calc(100% - 350px)"; 
+			position: absolute;
+			z-index: 100;
+			top: 0;
+			right: 20px;
+		}
+
+		&__block-right {
+			margin-top: 130px;
+			width: ~"calc(100% - 330px)";
+
+		}
+
+		&__block-contact {
+			position: absolute;
+			width: 260px;
+			left: 0px;
+			top: 130px;
+		}
+
+		&__btn, &__nav {
+			display: none;
+		}
+
+		&__block-social {
+			padding-left: 0;
+		}
+		&__block-address {
+			padding-left: 30px;
+			background-position: 0 5px;
+		}
+	}
+
+	.social {
+		display: inline-block;
+		width: 45%;
+	}
+
+	.uSocial-Share .uscl-bar.uscl-size32.uscl-round-rect .uscl-slide-open {
+		position: absolute;
+		bottom: -40px;
+		right: 20px;
+		margin-right: 0px;
 	}
 }
 
 @media @mobil-widths {
+	.page-footer-bg {
+		height: @height-footer-mobil;
+		margin-top: -@height-footer-mobil;
+		padding-top: 10px;
+	}
 	.page-footer {
-		
-		&__logo {
-			width: 5rem;
-			height: 6.8rem;
-			margin-left: -2.5rem;
-			top: 0.3rem;
 
+		&__block-left {
+			float: none;
+			width: 265px;
+			margin: 0 auto;
+			text-align: center;
 		}
+		
+		&__block-center {
+			position: static;
+			margin-top: 135px;
+    		margin-left: -20px;    
+    		width: ~"calc(100% + 40px)";
+
+    		.block-form {  
+    			&__title {
+    				font-size: 13px;
+    			}  			
+
+    			&__user-input, &__btn {
+    				display: block;
+    				max-width: 350px;
+    				width: 80%;
+    				margin: 0 auto 15px;
+    			}    			
+    		}
+		}
+
+		&__block-contact {
+			top: 100px;
+			left: 50%;
+			margin-left: -160px;
+		}
+
+		&__block-right {
+			margin-top: 0;
+			float: none;
+			width: 250px;
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 80px;
+		}
+
+		&__comment {
+			left: 50%;
+			margin-left: -150px;
+		}
+	}
+
+	.uSocial-Share .uscl-bar.uscl-size32.uscl-round-rect .uscl-slide-open {
+		position: absolute;
+		bottom: 110px;
+		right: 50%;
+		margin-right: -150px;
+	}
+
+	.social {
+		display: block;
+		width: 100%;
+		margin-left: 30px;
 	}
 }

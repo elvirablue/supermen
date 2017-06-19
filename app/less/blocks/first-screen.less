@@ -1,3 +1,126 @@
+.first-screen-bg {
+	position: relative;
+	z-index: 10;
+	background-color: blue;
+	background: url("../img/bg-details.jpg") 0 0 repeat;
+	background-size: auto;
+	min-height: 542px;
+	height: auto;
+	box-shadow: inset 0 -3px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.first-screen-bg-blue {
+	position: absolute;
+	z-index: 11;
+	width: 100%;
+	height: 180px;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
 .first-screen {
 	.container-fluid();
+	.clearfix();
+	position: relative;
+	z-index: 12;
+	padding: 40px 52px 25px;
+
+	&__block-form {
+		display: block;
+		position: absolute;
+		z-index: 13;
+		top: 52px;
+		right: 52px;
+		width: 300px;
+		height: auto;
+		min-height: 460px;
+		margin-top: 0;
+		
+	}
+
+	&__form-comment {
+		display: block;		
+		position: absolute;
+		z-index: 13;
+		bottom: 0;
+		width: 90%;
+		padding-right: 55px;
+		background: url("../img/bg-arr.png") top right no-repeat;
+		color: @color-white;
+		font-style: italic;
+	}	
+}
+
+@media @tablet-widths {
+	.first-screen {
+		&__block-form {
+			position: relative;
+			top: 40px;
+			right: auto;
+			width: 90%;
+			margin: 0 auto;
+			min-height: 300px;
+		}
+
+		&__form-comment {
+			width: 100%;
+			top: -50px;
+			padding: 10px;
+			background-image: none;
+			text-align: center;
+		}
+	}	
+}
+
+@media @mobil-widths {
+	.first-screen-bg {
+		min-height: 880px;
+		max-height: 1040px;
+		height: ~"calc(720px + 90vw/1.72)";
+	}
+
+	.first-screen-bg-blue {
+		height: 300px;
+	}
+	.first-screen {
+		&__block-form {
+			top: 50px;
+			left: -20px;
+			width: ~"calc(100% + 40px)";
+		}
+
+		&__form-comment {
+			width: 100%;
+			top: -75px;
+		}
+
+		&__header.mobil {
+			display: block;
+			padding-top: 10px;
+
+			img {
+				width: 80%;
+				max-width: 337px;
+			}
+			
+			.block-contact-phone {
+				margin-top: 20px;
+
+				.block-contact-phone__number {
+					padding-bottom: 10px;
+				}
+
+				.block-contact-phone__text {
+					font-size: 10px;
+					i { display: inline-block;}
+				}
+			}
+		}
+
+		&__header-btn {
+			width: 100%;
+			max-width: 350px;
+			margin-top: 10px;
+		}
+	}
 }

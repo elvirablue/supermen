@@ -1,0 +1,43 @@
+.main-works {
+	.container-fluid();
+	.block-shadow-white();
+	background-color: #ffffff;
+	min-height: 500px;
+
+	h2 {
+		position: relative;
+		z-index: 6;
+		margin-bottom: 45px;
+	}
+
+	&__slider-img-wr {
+		display: block;
+		width: 100%;
+		height: 527px;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	&__slider-comment {
+		display: block;
+		width: 964px;
+		margin: 0 auto;
+		.roboto(14px);
+		padding: 45px 20px;
+		text-align: justify;
+	}
+
+	&__slider-works-controls {
+		display: block;
+		width: 100%;
+		text-align: center;
+
+		ul {
+			list-style: none;
+
+			li {
+				display: inline-block;
+			}
+		}
+	}
+}

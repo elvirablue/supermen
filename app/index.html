@@ -21,7 +21,19 @@
 	<script src="js/venders/jquery-1.12.4.js"></script>
 	<script src="js/venders/jquery.maskedinput.js"></script>
 	
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+	<script type="text/javascript">
+            var map;
 
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [54.9452258443715,82.86015272140504],
+                    zoom: 14
+                });
+
+                DG.marker([54.9452258443715,82.86015272140504]).addTo(map).bindPopup('«СуперМУЖ на ЧАС» - служба мелкого бытового ремонта');
+            });
+    </script>
 	
 	<link rel="stylesheet" href="css/venders/jquery.arcticmodal-0.3.css">	
 	<script src="js/venders/jquery.arcticmodal-0.3.min.js"></script>
@@ -33,37 +45,54 @@
 	 <![endif]-->
 </head> 
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="wrapper-x">
 	<div class="wrapper-y">
 	<!-- *************************** ШАПКА ***************************************- -->
 		<header class="page-header">
+			<div class="page-header__logo">
+				<a href="index.html" class="page-header__logo-img"><img src="img/logo.png" alt=""></a>
+				<p class="caps page-header__logo-subtitle">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
+			</div>
+			<div class="page-header__center">
+				<button class="btn page-header__btn">Срочный вызов</button>
+			</div>
 			
+			<div class="page-header__contact">
+				<div class="block-contact-phone">
+					<p class="block-contact-phone__number"><i>8 (383)</i> 375-02-34<br>8-800-770-02-35 </p>
+					<p class="block-contact-phone__text"><i>Звоните, мы работаем</i> без выходных <b>c</b> 8.00 <b>до</b> 20.00!</p>
+				</div>
+			</div>
 		</header>
 
 	<!-- *************************** БЛОК МЕНЮ ***************************************- -->
 		<div class="main-nav-block main-nav--closed">
+			<p class="caps page-header__logo-subtitle mobil">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
-			<div class="main-nav-bg"></div>	
-			<nav class="main-nav">			
+			<nav class="main-nav main-nav--first">
 				<div class="main-nav__wrapper">
 					<ul>
-						<li class="active"><a href="">Главная</a></li>
-						<li><a href="about.html">О нас</a></li>
-						<li><a href="schedule.html">Расписание</a></li>
-						<li><a href="smi-publications.html">СМИ о нас</a></li>
-						<li><a href="gallery.html">Фотогалерея</a></li>
-						<li><a href="lease.html">Аренда</a></li>
-						<li><a href="area.html">Пространство</a></li>
+						<!--<li><a href="index.html"><img style="height: 80%; vertical-align: middle;" src="img/logo.png" alt=""></a></li>	-->				
 						<li><a href="contacts.html">Контакты</a></li>
+						<li><a href="reviews.html">Отзывы клиентов</a></li>
+						<li><a href="info.html">Информация для клиентов</a></li>
+						
+					</ul>
+				</div>
+			</nav>	
+			<nav class="main-nav  main-nav--last">			
+				<div class="main-nav__wrapper">
+					<ul>
+						<li><a href="#">Услуги электрика</a></li>
+						<li><a href="#">Услуги сантехника</a></li>
+						<li><a href="#">Замена замка</a></li>
+						<li><a href="#">Навеска предметов интерьера</a></li>
+						<li><a href="#">Установка бытовой техники</a></li>
+						<li><a href="#">Сборка/разборка мебели</a></li>
+						<li><a href="#">Косметический ремонт</a></li>
+						<li><a href="#">Прочие услуги</a></li>
+						<li><a href="#">Обслуживание организаций</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -71,26 +100,593 @@
 
 	<!-- *************************** ПЕРВЫЙ ЭКРАН ***************************************- -->
 		<div class="first-screen-bg">
-				
+			<div class="first-screen-bg-blue"></div>
+			<div class="first-screen">
+				<div class="first-screen__header mobil">
+					<img src="img/logo.png" alt="">
+					<div class="block-contact-phone">
+						<p class="block-contact-phone__number"><i>8 (383)</i> 375-02-34<br>8-800-770-02-35 </p>
+						<p class="block-contact-phone__text"><i>Звоните, мы работаем</i> без выходных <b>c</b> 8.00 <b>до</b> 20.00!</p>
+					</div>
+					<button class="btn first-screen__header-btn">Срочный вызов</button>
+				</div>
+				<div class="main-title">
+					<p><i>ЛЮБОЙ МЕЛКИЙ</i> БЫТОВОЙ РЕМОНТ В&nbsp;НОВОСИБИРСКЕ С&nbsp;ГАРАНТИЕЙ <i>КАЧЕСТВА</i> по&nbsp;самым&nbsp;низким&nbsp;ценам</p>
+					<h1>СуперМУЖ на ЧАС!</h1>
+				</div>
+				<div class="main-video">
+					<video width="550px" height="320px" controls tabindex="0" poster="img/video/prev.jpg">
+					   	
+					   	<source src="img/video/video1.mp4" ttype="video/mp4; codecs="avc1.42E01E, mp4a.40.2"	">
+					   	Видео не поддерживается вашим браузером. 
+					  	<a href="https://www.youtube.com/?gl=RU&amp;hl=ru">Смотреть в YouTube</a>.
+					</video>
+				</div>
+				<div class="first-screen__block-form ">
+					<div class="first-screen__form-comment">
+						Получите <b>консультацию бесплатно</b> и&nbsp;предварительный расчет стоимости&nbsp;работ
+					</div>
+					<div class="block-form effect-shadow">
+						<form action="" id="form-1" class="">
+							<p class="block-form__title">
+								<i>Введите Ваши</i> контактные данные
+							</p>
+							<input type="text" class="user-input block-form__user-input required" id="user_name_form-1" name="user-name" placeholder="Ваше имя" >
+	       					<input type="tel" class="user-input block-form__user-input required" id="user_phone_form-1" name="user-phone" placeholder="Ваш телефон" >
+	       					<button type="submit" class="btn btn-12 block-form__btn" type="submit" id="btn_form_form-1">Получить консультацию<br>и расчет стоимости</button>    
+	      					<input type="text" class="form_text_hide" name="text">
+	      					<p class="block-form__text">
+	      						Оператор позвонит Вам в&nbsp;течение&nbsp;15&nbsp;минут
+	      					</p>
+						</form>						
+					</div>					
+				</div>
+			</div>	
 		</div>
-		<div class="first-screen">
-			<h1>СуперМУЖ на ЧАС!</h1>
-			<h2>СуперМУЖ на ЧАС!</h2>
-		<div class="btn">Срочный вызов</div><br>
-		<button class="btn">Срочный вызов</button><br>
-		<a href="#" class="btn">Срочный вызов</a><br>
+		
+	<!-- *************************** БЛОК ПРЕИМУЩЕСТВА ***************************************- -->
+		<div class="benefit">
+			<div class="benefit__item benefit--one">
+				<p class="benefit__title">40 минут</p>
+				<p class="benefit__subtitle">от Вашего звонка до приезда мастера</p>
+			</div>
+			<div class="benefit__item benefit--two">
+				<p class="benefit__title">От 999 руб. <i>за работу мастера</i></p>
+				<p class="benefit__subtitle">Гарантируем&nbsp;самую низкую&nbsp;цену</p>
+			</div>
+			<div class="benefit__item benefit--three">
+				<p class="benefit__title">Фиксированная <i>стоимость работ</i></p>
+				<p class="benefit__subtitle">Стоимость&nbsp;не&nbsp;поменяется в&nbsp;процессе&nbsp;выполнения&nbsp;работ</p>
+			</div>			
 		</div>
-
-	
-
 		<div class="separator"></div>
+
+	<!-- *************************** БЛОК АКЦИЯ ***************************************- -->
+		<div class="main-sale-bg bg-blue">
+			<div class="main-sale">
+				<div class="main-sale__img-wr">
+					<img src="img/nophoto.png" alt="">
+				</div>
+				<div class="main-sale__content-wr">
+					<h2>Внимание, акция! онлайн заявка!</h2>
+					<div class="main-sale__text-wr">
+						<p>Текст этот, несмотря на название, не имеет никакого отношения. Контент – написание символов на 	название, не имеет никакого отношения к обитателям. Оригинального трактата, благодаря чему появляется 	возможность. Имеется разница в длине наиболее распространенных слов для вставки на основе. Оригинального трактата, благодаря чему появляется 	возможность. Имеется разница в длине наиболее распространенных слов для вставки на основе.</p>
+					</div>
+					<div class="main-sale__btn">
+						<a href="#" class="btn"> читать полностью</a>
+					</div>
+				</div>
+			</div>			
+		</div>
+
+	<!-- *************************** БЛОК ПОПУЛЯРНЫЕ УСЛУГИ ***************************************- -->
+		<div class="main-services-bg bg-gray">
+			<div class="main-services">
+				<h2>ПОПУЛЯРНЫЕ УСЛУГИ</h2>
+			
+				<div class="main-services__list">
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+					<div class="main-services__item">
+						<a href="#" class="block-service">
+							<div  class="block-service__img-wr">
+								<img src="img/nophoto.png" alt="">
+							</div>
+							<div class="block-service__title-wr">
+								<p class="block-service__price">300 P</p>
+								<p class="block-service__head">Установка кухонной раковины</p>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			
+
+
+				<div class="main-services__form-wrapper">
+					<h2>НЕ НАШЛИ НУЖНУЮ ВАМ УСЛУГУ ИЛИ&nbsp;ВИД&nbsp;РАБОТ?</h2>
+					<p class="main-services__form-comment">
+						Позвоните оператору по телефону 8 (383)<b> 375-02-34</b><br>
+						и получите консультацию по всем видам работ и стоимости
+					</p>
+					<div class="main-services__block-form">
+						<div class="block-form">
+							<form action="" id="form-1" class="">
+								<p class="block-form__title">
+									<i>Введите Ваши</i> контактные данные
+								</p>
+								<input type="text" class="user-input block-form__user-input required" id="user_name_form-1" name="user-name" placeholder="Ваше имя" >
+						     	<input type="tel" class="user-input block-form__user-input required" id="user_phone_form-1" name="user-phone" placeholder="Ваш телефон" >
+						     	<button type="submit" class="btn btn-12 block-form__btn" type="submit" id="btn_form_form-1">Получить консультацию<br>и расчет стоимости</button>    
+						    	<input type="text" class="form_text_hide" name="text">
+						    	<p class="block-form__text">
+						    		Оператор позвонит Вам в&nbsp;течение&nbsp;15&nbsp;минут
+						    	</p>
+							</form>						
+						</div>		
+					</div>
+					<div class="main-services__block-desktop">
+						<p>Получите<br><b>консультацию бесплатно</b><br>и предварительный расчет<br>стоимости работ.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- *************************** БЛОК наши МАСТЕРА ***************************************- -->
+		<div class="main-masters-bg">
+			<div class="main-masters">
+				<h2>наши МАСТЕРА</h2>
+				<div class="slider js_slider js_simple_dots simple js_slider">
+                	<div class="frame js_frame">
+                	    <ul class="slides js_slides">
+                	        <li class="js_slide">
+                	        	<div class="block-master">
+									<div class="block-master__img-wr" style="background-image: url(img/masters/1.jpg);"></div>
+								
+									<div class="block-master__description">
+										<p class="block-master__name">Сидоров Иван - 1</p>
+										<p class="block-master__experience">мастер-универсал, опыт работы 20 лет </p>
+										<ul class="block-master__work-list blue-list">
+											<li>сантехник, электрик</li>
+											<li>замена замков и личинок</li>
+											<li>навеска предметов, сборка мебели</li>
+											<li>установка бытовой техники</li>
+										</ul>
+									</div>
+									<div class="block-master__btn">
+										<a href="#" class="btn">вызвать мастера</a>
+									</div>
+								</div>
+                	        </li>
+                	        <li class="js_slide">
+                	        	<div class="block-master">
+									<div class="block-master__img-wr" style="background-image: url(img/masters/1.jpg);"></div>
+								
+									<div class="block-master__description">
+										<p class="block-master__name">Сидоров Иван - 2</p>
+										<p class="block-master__experience">мастер-универсал, опыт работы 20 лет</p>
+										<ul class="block-master__work-list blue-list">
+											<li>сантехник, электрик</li>
+											<li>замена замков и личинок</li>
+											<li>навеска предметов, сборка мебели</li>
+											<li>установка бытовой техники</li>
+										</ul>
+									</div>
+									<div class="block-master__btn">
+										<a href="#" class="btn">вызвать мастера</a>
+									</div>
+								</div>
+                	        </li>
+                	        <li class="js_slide">
+                	        	<div class="block-master">
+									<div class="block-master__img-wr" style="background-image: url(img/masters/1.jpg);"></div>
+								
+									<div class="block-master__description">
+										<p class="block-master__name">Сидоров Иван - 3</p>
+										<p class="block-master__experience">мастер-универсал, опыт работы 20 лет</p>
+										<ul class="block-master__work-list blue-list">
+											<li>сантехник, электрик</li>
+											<li>замена замков и личинок</li>
+											<li>навеска предметов, сборка мебели</li>
+											<li>установка бытовой техники</li>
+										</ul>
+									</div>
+									<div class="block-master__btn">
+										<a href="#" class="btn">вызвать мастера</a>
+									</div>
+								</div>
+                	        </li>
+                	        
+                	    </ul>
+                	</div>
+                	<span class="js_prev prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve"> 
+                    	<g><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0   c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744   c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z" fill="#FFFFFF"/> </g>
+                    </svg>
+                	</span>
+                	<span class="js_next next">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                    	<g><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" fill="#FFFFFF"/></g>
+                    </svg>
+                	</span>
+                	<ul class="slider-controls js_dots"></ul>
+            	</div>
+				
+			</div>
+			
+		</div>
+
+	<!-- *************************** БЛОК ОТЗЫВЫ ***************************************- -->
+		<div class="main-reviews-bg bg-gray">
+			<div class="main-reviews">
+				<h2>ОТЗЫВЫ О НАС</h2>
+			
+
+				<div class="slider slider_reviews js_slider simple js_ease">
+                	<div class="frame js_frame">
+                	    <ul class="slides js_slides">
+                	        <li class="js_slide">
+                	        	<div class="block-review">
+									<div class="block-review__img-wr" style="background-image: url(img/reviews/1.jpg);"></div>
+								
+									<div class="block-review__description">
+										<p class="block-review__title">Заголовок отзыва</p>
+										<div class="block-review__text"> 
+											<p>Обязан древнеримскому философу цицерону, ведь именно. Оценке качества восприятия макета рыбным текстом является знаменитый lorem отсюда напрашивается. На руку при оценке качества восприятия макета. Разница в длине наиболее распространенных слов. Чему появляется возможность получить более.</p>
+										</div>
+										<div class="block-review__author"> 
+											<p><b>Илона Ивановна,</b><br>г. Новосибирк</p>
+										</div>										
+									</div>
+									
+								</div>
+                	        </li>
+                	        <li class="js_slide">
+                	        	<div class="block-review">
+									<div class="block-review__img-wr" style="background-image: url(img/reviews/1.jpg);"></div>
+								
+									<div class="block-review__description">
+										<p class="block-review__title">Заголовок отзыва</p>
+										<div class="block-review__text"> 
+											<p>Обязан древнеримскому философу цицерону, ведь именно. Оценке качества восприятия макета рыбным текстом является знаменитый lorem отсюда напрашивается. На руку при оценке качества восприятия макета. Разница в длине наиболее распространенных слов. Чему появляется возможность получить более.</p>
+										</div>
+										<div class="block-review__author"> 
+											<p><b>Илона Ивановна,</b><br>г. Новосибирк</p>
+										</div>										
+									</div>
+									
+								</div>
+                	        </li>
+                	        <li class="js_slide">
+                	        	<div class="block-review">
+									<div class="block-review__img-wr" style="background-image: url(img/reviews/1.jpg);"></div>
+								
+									<div class="block-review__description">
+										<p class="block-review__title">Заголовок отзыва</p>
+										<div class="block-review__text"> 
+											<p>Обязан древнеримскому философу цицерону, ведь именно. Оценке качества восприятия макета рыбным текстом является знаменитый lorem отсюда напрашивается. На руку при оценке качества восприятия макета. Разница в длине наиболее распространенных слов. Чему появляется возможность получить более.</p>
+										</div>
+										<div class="block-review__author"> 
+											<p><b>Илона Ивановна,</b><br>г. Новосибирк</p>
+										</div>										
+									</div>
+									
+								</div>
+                	        </li>
+                	        
+                	    </ul>
+                	</div>
+                	<span class="js_prev prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve"> 
+                    	<g><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0   c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744   c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z" fill="#02a0e3"/> </g>
+                    </svg>
+                	</span>
+                	<span class="js_next next">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                    	<g><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" fill="#02a0e3"/></g>
+                    </svg>
+                	</span>
+                	
+            	</div>
+				
+			</div>
+			
+		</div>
+
+	<!-- *************************** БЛОК ОТЗЫВЫ ***************************************- -->
+		<div class="main-works-bg bg-gray">
+			<div class="main-works">
+				<h2>ПРИМЕРЫ РАБОТ НАШИХ МАСТЕРОВ</h2>
+
+				<div class="slider slider--works slider_works js_slider simple js_ease">
+                	<div class="frame frame--works js_frame">
+                	    <ul class="slides js_slides">
+                	        <li class="js_slide">
+								<div class="main-works__slider-img-wr" style="background-image: url('img/galery/1.jpg');"></div>
+								<p class="main-works__slider-comment">Он веб-дизайнерами для вставки на латыни. Возможность получить более того, есть специальные генераторы создающие. Он веб-дизайнерами для вставки на интернет-страницы. Контент – написание символов на латыни. Кириллице значительно различается генераторы, создающие собственные варианты текста исключительно демонстрационная.</p>
+                	        </li>
+                	        <li class="js_slide">
+								<div class="main-works__slider-img-wr" style="background-image: url('img/galery/1.jpg');"></div>
+								<p  class="main-works__slider-comment">Он веб-дизайнерами для вставки на латыни. Возможность получить более того, есть специальные генераторы создающие. Он веб-дизайнерами для вставки на интернет-страницы. Контент – написание символов на латыни. Кириллице значительно различается генераторы, создающие собственные варианты текста исключительно демонстрационная.</p>
+                	        </li>
+                	        <li class="js_slide">
+								<div class="main-works__slider-img-wr" style="background-image: url('img/galery/1.jpg');"></div>
+								<p  class="main-works__slider-comment">Он веб-дизайнерами для вставки на латыни. Возможность получить более того, есть специальные генераторы создающие. Он веб-дизайнерами для вставки на интернет-страницы. Контент – написание символов на латыни. Кириллице значительно различается генераторы, создающие собственные варианты текста исключительно демонстрационная.</p>
+                	        </li>
+                	    </ul>
+                	</div>
+                	<span class="js_prev prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve"> 
+                    	<g><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0   c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744   c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z" fill="#02a0e3"/> </g>
+                    </svg>
+                	</span>
+                	<span class="js_next next">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                    	<g><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" fill="#02a0e3"/></g>
+                    </svg>
+                	</span>
+                </div>
+
+				<div class="main-works__slider-works-controls">
+					<ul>
+						<li>
+							<div class="main-works__slider-img-control" style="background-image: url('img/galery/1.jpg');"></div>
+						</li>
+						<li>
+							<div class="main-works__slider-img-control" style="background-image: url('img/galery/1.jpg');"></div>
+						</li>
+						<li>
+							<div class="main-works__slider-img-control" style="background-image: url('img/galery/1.jpg');"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+	<!-- *************************** БЛОК КОНТАКТЫ ***************************************- -->
+		<div class="main-contact-bg bg-blue">
+			<div class="main-contact">
+				<h2>КОНТАКТЫ</h2>
+				<div class="main-contact__block">
+					
+					<div class="main-contact__map-wr">
+						<div class="main-contact__map" id="map"></div>
+					</div>
+					<div class="main-contact__content-wr">					
+						<div class="main-contact__text-wr">
+							<p><b>Адрес:</b> Новосибирск, ул. Петухова, 17</p>
+							<p><b>Тел.:</b> + 7 (383) 375-02-34</p>
+							<p><b>График работы:</b> пн. - вс. 8:00 - 20:00</p>
+						</div>
+						<div class="main-contact__btn">
+							<a href="#" class="btn ">получить консультацию</a>
+							<a href="#" class="btn ">вызвать мастера</a>
+						</div>
+					</div>
+
+				</div>
+			</div>			
+		</div>
+
+	<!-- *************************** БЛОК АКЦИИ! НОВОСТИ И СТАТЬИ ***************************************- -->
+		<div class="main-news-bg bg-gray">
+			<div class="main-news">
+				<h2>АКЦИИ! НОВОСТИ И СТАТЬИ</h2>
+
+				<div class="main-news__block-wr">
+					<div class="main-news__block-item">
+						<div class="block-rubric">
+							<p class="block-rubric__date">30.05.2017</p>
+							<div class="block-rubric__img-wr" style="background-image: url(img/news/1.jpg);"></div>
+							<h4>Длинный заголовок заголовок заголовок новости</h4>
+							<p class="block-rubric__time-read">9 минут на прочтение</p>
+							<a href="#" class="block-rubric__link">Читать подробнее</a>
+							<div class="block-rubric__name">Название рубрики</div>
+						</div>
+					</div>
+					<div class="main-news__block-item">
+						<div class="block-rubric">
+							<p class="block-rubric__date">30.05.2017</p>
+							<div class="block-rubric__img-wr" style="background-image: url(img/news/1.jpg);"></div>
+							<h4>Длинный  заголовок новости</h4>
+							<p class="block-rubric__time-read">9 минут на прочтение</p>
+							<a href="#" class="block-rubric__link">Читать подробнее</a>
+							<div class="block-rubric__name">Название рубрики</div>
+						</div>
+					</div>
+					<div class="main-news__block-item">
+						<div class="block-rubric">
+							<p class="block-rubric__date">30.05.2017</p>
+							<div class="block-rubric__img-wr" style="background-image: url(img/news/1.jpg);"></div>
+							<h4>Длинный заголовок заголовок заголовок новости</h4>
+							<p class="block-rubric__time-read">9 минут на прочтение</p>
+							<a href="#" class="block-rubric__link">Читать подробнее</a>
+							<div class="block-rubric__name">Название рубрики</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="main-news__btn-wr">
+					<button class="btn">смотреть все новости</button>
+					
+				</div>
+
+			</div>
+		</div>
+
+
+	<!-- *************************** БЛОК АКЦИИ! НОВОСТИ И СТАТЬИ ***************************************- -->
+		<div class="main-question-bg bg-gray">
+			<div class="main-question">
+				<h2>Остались вопросы?</h2>
+				<p class="main-question__comment">Специалист <b>перезвонит Вам</b> в рабочее время и <b>ответит на любые вопросы</b> или предварительно <b>рассчитает стоимость работы</b> мастера</p>
+
+				<form action="" method="post" class="main-question__form block-form" id="form-question">
+					<p class="block-form__title">
+						<i>Введите Ваши</i> контактные данные и вопрос
+					</p>
+					<input type="text" class="user-input block-form__user-input required" id="user_name_form-question" name="user-name" placeholder="Ваше имя" >
+					<input type="tel" class="user-input block-form__user-input required" id="user_phone_form-question" name="user-phone" placeholder="Ваш телефон" >
+					<textarea name="user-text" id="user_text_form-question" cols="10" rows="5" class="user-input block-form__user-textarea">Ваш вопрос</textarea>
+					<button type="submit" class="btn  block-form__btn" type="submit" id="btn_form_form-question">Задать вопрос</button>  
+	      			<input type="text" class="form_text_hide" name="text">					
+				</form>
+
+			</div>
+		</div>
+
+		
 
 	<!-- *************************** БЛОК ПОДВАЛ***************************************- -->	
 	</div> <!-- end wrapper-y -->	
 
 	<footer class="page-footer-bg">
 		<div class="page-footer">
-			
+			<div class="page-footer__block-left">
+				<div class="page-footer__logo">
+					<a href="index.html" class="page-footer__logo-img"><img src="img/logo-w.png" alt=""></a>
+					<p class="caps page-footer__logo-subtitle">Товарный знак зарегистрирован в 2009 году</p>
+				</div>
+				<button class="btn page-footer__btn">Срочный вызов</button>
+				<div class="page-footer__comment">
+					<p>Сайт не является публичной офертой</p>
+					<p>© 2007-2017 «СуперМУЖ на ЧАС»</p>
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+			<div class="page-footer__block-center">
+				<form action="" method="post" class="block-form" id="form-footer">
+					<p class="block-form__title">
+						Получайте <b>новости и полезные статьи</b> от нас
+					</p>
+					<input type="email" class="user-input block-form__user-input required" id="user_email_form-footer" name="user-email" placeholder="Ваш e-mail" >
+					<button type="submit" class="btn  block-form__btn" type="submit" id="btn_form_form-footer">Подписаться</button>  
+	      			<input type="text" class="form_text_hide" name="text">
+				</form>
+				<div class="page-footer__nav">
+					<div class="page-footer__nav-collumn">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Косметический ремонт</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Новости и статьи</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Контакты</a></li>							
+						</ul>
+					</div>
+					<div class="page-footer__nav-collumn">
+						<ul>
+							<li><a href="#">Услуги электрика</a></li>
+							<li><a href="#">Услуги сантехника</a></li>
+							<li><a href="#">Замена замка</a></li>
+							<li><a href="#">Навеска предметов интерьера</a></li>
+							<li><a href="#">Установка бытовой техники</a></li>
+							<li><a href="#">Сборка/разборка мебели</a></li>
+							<li><a href="#">Косметический ремонт</a></li>
+							<li><a href="#">Прочие услуги</a></li>
+							<li><a href="#">Обслуживание организаций</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page-footer__block-right">
+				<div class="page-footer__block-contact">
+					<div class="block-contact-phone">
+						<p class="block-contact-phone__number"><i>8 (383)</i> 375-02-34<br>8-800-770-02-35 </p>
+						<p class="block-contact-phone__text">Звонок&nbsp;с&nbsp;любых&nbsp;телефонов на&nbsp;8&#8209;800&nbsp;БЕСПЛАТНЫЙ</p>
+					</div>
+				</div>
+				<div class="page-footer__block-address">
+					<p>г. Новосибирск</p>
+					<p>ул. Петухова, 17, оф. 313</p>
+				</div>
+				<div class="page-footer__block-social">				
+					<a href="#" class="social social--vk">Мы Вконтакте</a>
+					<a href="#" class="social social--ok">Мы в Одноклассниках</a>
+					<a href="#" class="social social--inst">Мы в Инстаграмм</a>
+					<!-- AllSocial -->
+					<script async src="https://usocial.pro/usocial/usocial.js?v=6.1.3.1" data-script="usocial" charset="utf-8"></script>
+					<div class="uSocial-Share" data-pid="5298654f57e8eafc36e832824bc1cdd7" data-type="share" data-options="round-rect,style1,default,absolute,vertical,size32,eachCounter0,counter0" data-social="spoiler" data-mobile="vi,wa,telegram,sms"></div>
+					<!-- /AllSocial -->
+				</div>
+				
+			</div>
 		</div>
 
 	</footer>
@@ -98,19 +694,32 @@
 	<!-- ************** БЛОК ПРИЛИПАЮЩАЯ НАВИГАЦИЯ ПРИ СКРОЛЛЕ ******************- -->
 	<div class="main-nav-scroll">
 		<div class="main-nav-block main-nav--closed">
+			<p class="caps page-header__logo-subtitle mobil">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
 		
-			<nav class="main-nav">			
+			<nav class="main-nav main-nav--first">
 				<div class="main-nav__wrapper">
 					<ul>
-						<li class="active"><a href="">Главная</a></li>
-						<li><a href="about.html">О нас</a></li>
-						<li><a href="schedule.html">Расписание</a></li>
-						<li><a href="smi-publications.html">СМИ о нас</a></li>
-						<li><a href="gallery.html">Фотогалерея</a></li>
-						<li><a href="lease.html">Аренда</a></li>
-						<li><a href="area.html">Пространство</a></li>
+						<li><a href="contacts.html"><img style="height: 80%; vertical-align: middle;" src="img/logo-w.png" alt=""></a></li>					
 						<li><a href="contacts.html">Контакты</a></li>
+						<li><a href="reviews.html">Отзывы клиентов</a></li>
+						<li><a href="info.html">Информация для клиентов</a></li>
+						
+					</ul>
+				</div>
+			</nav>	
+			<nav class="main-nav  main-nav--last">			
+				<div class="main-nav__wrapper">
+					<ul>
+						<li><a href="#">Услуги электрика</a></li>
+						<li><a href="#">Услуги сантехника</a></li>
+						<li><a href="#">Замена замка</a></li>
+						<li><a href="#">Навеска предметов интерьера</a></li>
+						<li><a href="#">Установка бытовой техники</a></li>
+						<li><a href="#">Сборка/разборка мебели</a></li>
+						<li><a href="#">Косметический ремонт</a></li>
+						<li><a href="#">Прочие услуги</a></li>
+						<li><a href="#">Обслуживание организаций</a></li>
 					</ul>
 				</div>
 			</nav>

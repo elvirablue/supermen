@@ -1,0 +1,97 @@
+.main-services-bg {
+	width: 100%;	
+}
+
+.main-services {
+	.container-fluid();
+	.block-shadow-white();
+	background: #ffffff;
+	min-height: 500px;
+	
+
+	&__list {
+		padding-top: 50px;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+		justify-content: center;
+		margin: 0 -15px;
+	}
+
+	&__item {
+		padding: 10px;
+	}
+
+	&__form-comment {
+		padding-top: 35px;
+	}
+
+	&__form-wrapper {
+		position: relative;
+		z-index: 12;
+		height: 610px;
+	}
+
+	&__block-form {
+		display: block;
+		position: absolute;
+		z-index: 13;
+		top: 170px;
+		right: 52px;
+		width: 300px;
+		height: auto;
+		min-height: 460px;
+		margin-top: 0;
+	}
+
+	&__block-desktop {
+		display: block;
+		position: absolute;
+		z-index: 13;
+		top: 270px;
+		left: -40px;
+		width: 660px;
+		height: 410px;
+
+		background: url("../img/mens.png") bottom left no-repeat,
+					url("../img/bg-arr-black.png") 470px 50px no-repeat;
+		background-size: auto;
+
+		text-align: center;
+
+		p {
+			display: inline-block;
+			text-align: left;
+			font-style: italic;
+		}
+	}
+}
+
+@media @tablet-widths {
+	
+
+	.main-services {
+		&__block-desktop {
+			display: none;
+		}
+
+		&__block-form {
+			position: relative;
+			top: 40px;
+			right: auto;
+			width: 100%;
+			margin: 0 auto;
+			min-height: 300px;
+		}
+	}	
+}
+
+@media @mobil-widths {
+	.main-services {
+		&__block-form {
+			top: 50px;
+			left: -20px;
+			width: ~"calc(100% + 40px)";
+		}
+	}
+}

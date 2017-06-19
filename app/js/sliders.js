@@ -45,17 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
-    Array.prototype.slice.call(document.querySelectorAll('.js_ease')).forEach(function (element, index) {
+   Array.prototype.slice.call(document.querySelectorAll('.js_ease')).forEach(function (element, index) {
 
-        if (element.classList.contains('main-tovar-hit')||element.classList.contains('main-tovar-new')) {
-            lory(element, {
-                infinite: 4,
-                slidesToScroll: 1,
-                slideSpeed: 1000,
-                element: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)'
-             });
-        };        
-    });
+       if (element.classList.contains('slider_reviews')||element.classList.contains('slider_works')) {
+           lory(element, {
+               infinite: 1,
+               slidesToScroll: 1,
+               slideSpeed: 1000,
+               element: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)'
+            });
+       };        
+   });
 
 
 });
