@@ -1,0 +1,32 @@
+.breadcramps {
+	display: block;
+	text-align: left;
+	list-style: none;
+	padding-top: 50px;
+
+	li {display: inline-block;}
+
+	li a {
+		.roboto(16px);
+		color: @color-blue;
+		text-decoration: underline;
+		
+	}
+
+	li:active a, li.active a {
+		color: @color-gray;
+		cursor: default;
+		text-decoration: none;
+	}
+
+	li a:after {
+		display: inline-block;
+		content: "/";
+		padding-left: 5px;
+		padding-right: 3px;
+	}
+
+	li:last-child a:after {
+		display: none;
+	}
+}

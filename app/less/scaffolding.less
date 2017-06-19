@@ -44,6 +44,7 @@ i {
 
 .effect-shadow {
 	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .effect-shadow:before, .effect-shadow:after {
@@ -77,7 +78,7 @@ i {
 }
 
 
-h1, h2, h3, h5 {	
+h1, h2 {	
 	.text-shadow();
 	font-style: normal;
 	font-weight: normal;
@@ -108,8 +109,15 @@ h4 {
 	font-weight: bold;
 }
 
-h4, h5 {
+h3 {
+	.cooper(20px);	
+	color: @color-white;
+	text-transform: uppercase;	
+	text-align: left;
+	padding-top: 15px;
+	font-weight: normal;
 	
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
 }
 
 hr {
@@ -251,6 +259,11 @@ a {
 .bg-bottom-shadow() {
 	background: url("../img/line-shadow-block.png") bottom center no-repeat #ffffff;
 	background-size: 100% auto;
+}
+
+.bottom-shadow {
+	.bg-bottom-shadow();
+	padding-bottom: 60px;
 }
 
 .block-white() {

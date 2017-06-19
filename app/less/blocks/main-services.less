@@ -20,6 +20,12 @@
 
 	&__item {
 		padding: 10px;
+		position: relative;
+		z-index: 10;
+	}
+
+	&__item:hover .block-service-yellow {
+		.shadow-hover();
 	}
 
 	&__form-comment {
@@ -37,7 +43,7 @@
 		position: absolute;
 		z-index: 13;
 		top: 170px;
-		right: 52px;
+		right: 20px;
 		width: 300px;
 		height: auto;
 		min-height: 460px;
@@ -48,19 +54,20 @@
 		display: block;
 		position: absolute;
 		z-index: 13;
-		top: 270px;
+		top: 255px;
 		left: -40px;
 		width: 660px;
 		height: 410px;
 
 		background: url("../img/mens.png") bottom left no-repeat,
-					url("../img/bg-arr-black.png") 470px 50px no-repeat;
+					url("../img/bg-arr-black.png") 500px 50px no-repeat;
 		background-size: auto;
 
 		text-align: center;
 
 		p {
 			display: inline-block;
+			padding-left: 30px;
 			text-align: left;
 			font-style: italic;
 		}
@@ -86,12 +93,24 @@
 	}	
 }
 
+.other {
+	.bg-bottom-shadow();
+	padding-bottom: 50px;
+	position: relative;
+}
+
 @media @mobil-widths {
 	.main-services {
 		&__block-form {
 			top: 50px;
 			left: -20px;
 			width: ~"calc(100% + 40px)";
-		}
+		}		
 	}
+}
+
+@media (max-width: 440px) {
+	.main-services__form-wrapper {
+			height: 680px;
+		}
 }

@@ -3,6 +3,7 @@
 	.block-shadow-white();
 	background-color: #ffffff;
 	min-height: 500px;
+	margin-bottom: 45px;
 
 	h2 {
 		position: relative;
@@ -16,6 +17,11 @@
 		height: 527px;
 		background-position: center center;
 		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media @tablet-widths {
+			height: ~"calc(85vw / 1.83)";
+		}
 	}
 
 	&__slider-comment {
@@ -25,6 +31,11 @@
 		.roboto(14px);
 		padding: 45px 20px;
 		text-align: justify;
+
+		@media @tablet-widths {
+			width: 100%;
+			padding: 20px 0;
+		}
 	}
 
 	&__slider-works-controls {
@@ -37,7 +48,32 @@
 
 			li {
 				display: inline-block;
+				width: 133px;
+				height: 110px;
+				margin: 2%;
+				border: 3px solid @color-white;
+				border-radius: 2px;
+				cursor: pointer;
+			}
+
+			li:hover, li.active, li:active {
+				border-color: @color-blue;
+				
 			}
 		}
+
+		@media @mobil-widths {
+			display: none;
+		}
+	}
+
+	&__slider-img-control {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
 	}
 }
