@@ -1,0 +1,27 @@
+.block-content-table {
+	width: 100%;
+	margin-top: 45px;
+
+	table {
+		border-collapse: separate;
+
+		td {
+			padding: 0 20px;
+
+			* {
+				text-align: justify;
+				text-indent: 15px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	@media @mobil-widths {
+		table {
+			td {
+				display: block;
+				width: 100% !important;
+			}
+		}
+	}
+}

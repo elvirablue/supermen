@@ -30,6 +30,12 @@
 @import "blocks/main-question.less";
 @import "blocks/block-head.less";
 @import "blocks/main-call.less";
+@import "blocks/block-press-prev.less";
+@import "blocks/controls-number.less";
+@import "blocks/block-content-table.less";
+@import "blocks/block-noimg.less";
+@import "blocks/main-press.less";
+
 /*
 @import "blocks/breadcpamps.less";
 
@@ -90,6 +96,21 @@
 		padding: 0 20px;
 	}
 
+}
+
+.img-frame() {
+	border: 7px solid #ffffff;
+	box-shadow: 0 0 0 1px #d1d1d1;
+}
+
+.bg-bottom-shadow() {
+	background: url("../img/line-shadow-block.png") bottom center no-repeat #ffffff;
+	background-size: 100% auto;
+}
+
+.bottom-shadow {
+	.bg-bottom-shadow();
+	padding-bottom: 60px;
 }
 
 .block-shadow-inset() {

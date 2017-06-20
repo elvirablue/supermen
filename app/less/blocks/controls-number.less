@@ -1,0 +1,30 @@
+.controls-number {
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+
+	*{color: @color-blue;}
+
+	i {
+		display: inline-block;
+		width: 4%;
+		margin: 0 5px;
+		a {
+			display: block;
+			width: 100%;
+			font-size: 18px;
+		}
+	}
+
+	i:hover a, i.active a, i:active a {
+		color: @color-red;
+		text-decoration: underline;
+	}
+
+	i:first-child:hover a, 
+	i:last-child:active a,
+	i:first-child:active a, 
+	i:last-child:hover a {
+		text-decoration: none;
+	}
+}
