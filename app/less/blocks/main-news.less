@@ -13,7 +13,7 @@
 
 	&__block-wr {
 		display: flex;
-		flex-flow: row no-wrap;
+		flex-flow: row wrap;
 		justify-content: center;
 
 		width: 100%;
@@ -38,13 +38,13 @@
 	}
 }
 @media @tablet-widths {
-	.main-news__block-item:nth-child(3) {
+	.index .main-news__block-item:nth-child(3) {
 		display: none;
 	}
 }
 
-@media @tablet-widths {
-	.main-news__block-item:nth-child(2) {
+@media @mobil-widths {
+	.index .main-news__block-item:nth-child(2) {
 		display: none;
 	}
 }
