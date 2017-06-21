@@ -1,0 +1,64 @@
+.drop-down-list {
+	display: block;
+	width: 100%; 
+	padding: 50px 0;
+	position: relative;
+	ul {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		list-style: none;
+
+		li {
+			display: block;
+			color: #ffffff;
+			
+			height: auto;
+			cursor: pointer;
+			p {
+				padding: 15px 20px;				
+				background-color: @color-blue;
+				border-bottom: 1px solid #ffffff;
+			}
+			
+
+			ul {
+			
+				display: none;
+				list-style: none;
+
+				li {
+					display: block;					
+					border-bottom: none;					
+
+					* {
+						color: @color-gray;
+						padding: 0 10px;
+						background-color: #ffffff;
+						line-height: 1.2;
+						padding-bottom: 15px;
+						text-align: justify;
+					}
+				}
+			}			
+		}
+
+
+
+		li.active > ul {
+			display: block;
+		}
+	}
+
+	ul > li > p:before {
+			content: "►";
+			display: inline-block;
+			margin-right: 8px;
+		}
+
+	ul > li.active > p:before {
+			content: "▼";
+			display: inline-block;
+			margin-right: 8px;
+		}
+}
