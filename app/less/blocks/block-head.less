@@ -11,10 +11,17 @@
 		text-transform: none;
 		color: @color-white;
 		padding: 45px 30px 0;
+
+		@media @mobil-widths {			
+			padding: 20px 0;
+		}
 	}
 
 	h3 {
 		padding: 10px 30px 0;
+		@media @mobil-widths {
+			text-align: center;
+		}
 	}
 
 	&__img-wr {
@@ -29,6 +36,11 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		@media @mobil-widths {
+			position: static;
+			margin: 20px auto 0;
+		}
 	}
 
 	&__text {
@@ -37,6 +49,10 @@
 		margin-top: 20px;
 		padding: 20px 320px 20px 30px;
 		background-color: #d2eaf7;
+		@media @mobil-widths {
+			margin: 20px auto;
+			padding: 20px;
+		}
 
 		* {
 			.roboto-bold(18px);
@@ -46,6 +62,9 @@
 		ul {
 			list-style: none;
 			padding-top: 20px;
+			@media @mobil-widths {
+				text-align: left;
+			}
 
 			li {
 				padding: 5px;

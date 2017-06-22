@@ -7,6 +7,9 @@
 	.container-fluid();
 	padding-bottom: 30px;
 	background: url("../img/bg-phone.png") right center no-repeat;
+	@media @tablet-widths {
+		background-image: none;
+	}
 
 	&__form-call {
 		display: block;
@@ -14,10 +17,28 @@
 		padding: 20px;
 		padding-right: 160px;		
 		text-align: right;
+		@media @mobil-widths {
+			padding: 10px;
+			text-align: center;
+		}
 	}
 
 	.form-call__user-input {
 		margin-right: 20px;
+
+		@media @mobil-widths {
+			width: 100%;
+			max-width: 350px;
+			margin: 10px auto;
+		}
+	}
+
+	.form-call__btn {
+		@media @mobil-widths {
+			width: 100%;
+			max-width: 350px;
+			margin: 10px auto;
+		}
 	}
 
 	&__comment {

@@ -6,12 +6,13 @@
 	ul {
 		display: block;
 		width: 100%;
-		padding: 10px;
+		
 		list-style: none;
 
 		li {
 			display: block;
 			color: #ffffff;
+			text-align: left;
 			
 			height: auto;
 			cursor: pointer;
@@ -26,6 +27,7 @@
 			
 				display: none;
 				list-style: none;
+				padding: 10px 0;
 
 				li {
 					display: block;					
@@ -47,6 +49,28 @@
 
 		li.active > ul {
 			display: block;
+		}
+
+		table {
+			width: 100%;
+			tr td {
+				height: auto;
+				padding: 10px;
+				vertical-align: middle;
+			}
+
+			tr td {
+				text-align: right;
+			}
+
+			tr td:first-child {
+				width: 70%;
+				text-align: left;
+			}
+
+			tr:nth-child(even) td {
+				background-color: #e8e8e8;
+			}
 		}
 	}
 
