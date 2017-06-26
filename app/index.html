@@ -55,7 +55,7 @@
 				<p class="caps page-header__logo-subtitle">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
 			</div>
 			<div class="page-header__center">
-				<button class="btn page-header__btn">Срочный вызов</button>
+				<button class="btn page-header__btn js-call">Срочный вызов</button>
 			</div>
 			
 			<div class="page-header__contact">
@@ -67,33 +67,29 @@
 		</header>
 
 	<!-- *************************** БЛОК МЕНЮ ***************************************- -->
-		<div class="main-nav-block main-nav--closed">
-			<p class="caps page-header__logo-subtitle mobil">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
+		<div class="main-nav-block main-nav--closed main-nav-static">
+			<div class="caps page-header__logo-subtitle mobil">
+				служба мелкого бытового ремонта<br><span>в г. Новосибирске</span>				
+			</div>
+			<div class="add-nav mobil">
+					<i class="tab-nav js_nav-service">Услуги</i>
+					<i class="tab-nav js_nav-menu">Главное меню</i>
+			</div>
+
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
 			<nav class="main-nav main-nav--first">
 				<div class="main-nav__wrapper">
-					<ul>
-						<!--<li><a href="index.html"><img style="height: 80%; vertical-align: middle;" src="img/logo.png" alt=""></a></li>	-->				
-						<li><a href="contacts.html">Контакты</a></li>
-						<li><a href="reviews.html">Отзывы клиентов</a></li>
-						<li><a href="info.html">Информация для клиентов</a></li>
-						
-					</ul>
+				    <ul class=""><li><a href="info/info.html" >Часто задаваемые вопросы</a></li><li><a href="info/conditions.html" >Условия предоставления услуг</a></li><li><a href="info/news-article.html" >Акции! Новости и статьи</a></li><li><a href="info/about.html" >О нас</a></li><li><a href="info/pressa.html" >Пресса о нас</a></li><li><a href="info/vacancy.html" >Вакансии</a></li>
+				    
+				    <li><a href="/supermen/" >Главная</a></li>
+				    
+				    <li><a href="/supermen/" ><img style="height: 80%; vertical-align: middle;" src="img/logo-w.png" alt=""></a></li><li><a href="contacts.html" >Контакты</a></li><li><a href="reviews.html" >Отзывы клиентов</a></li><li><a href="info.html" >Информация для клиентов</a></li></ul>
 				</div>
+				
 			</nav>	
 			<nav class="main-nav  main-nav--last">			
 				<div class="main-nav__wrapper">
-					<ul>
-						<li><a href="service-item.html">Услуги электрика</a></li>
-						<li><a href="service-item.html">Услуги сантехника</a></li>
-						<li><a href="service-lock.html">Замена замка</a></li>
-						<li><a href="service-naves.html">Навеска предметов интерьера</a></li>
-						<li><a href="service-tech.html">Установка бытовой техники</a></li>
-						<li><a href="service-meb.html">Сборка/разборка мебели</a></li>
-						<li><a href="service-rem.html">Косметический ремонт</a></li>
-						<li><a href="service-other.html">Прочие услуги</a></li>
-						<li><a href="service-firm.html">Обслуживание организаций</a></li>
-					</ul>
+				    <ul class=""><li class="first"><a href="services/service-electric/" >Услуги электрика</a></li><li><a href="services/service-santech/" >Услуги сантехника</a></li><li><a href="services/service-lock/" >Установка и ремонт замков</a></li><li><a href="services/service-naves/" >Навеска предметов интерьера</a></li><li><a href="services/service-tech/" >Установка бытовой техники</a></li><li><a href="services/service-meb/" >Сборка/разборка мебели</a></li><li><a href="services/service-rem/" >Косметический ремонт</a><ul class=""><li class="first"><a href="services/service-rem/service-pol.html" >Укладка пола</a></li><li><a href="services/service-rem/service-oboi.html" >Поклейка обоев</a></li><li><a href="services/service-rem/service-okno.html" >Ремонт окон</a></li><li><a href="services/service-rem/service-balkon.html" >Обустройство балконов, кладовок</a></li><li><a href="services/service-rem/service-dver.html" >Установка дверей</a></li><li><a href="services/service-rem/service-malar.html" >Малярные работы</a></li><li><a href="services/service-rem/service-kafel.html" >Укладка кафельной плитки</a></li><li class="last"><a href="services/service-rem/service-potolok.html" >Ремонт потолков</a></li></ul></li><li><a href="services/service-other/" >Прочие услуги</a><ul class=""><li class="first"><a href="services/service-other/service-rem-tech.html" >Ремонт бытовой техники</a></li><li><a href="services/service-other/service-svarka.html" >Сварочные работы</a></li><li><a href="services/service-other/service-brick.html" >Кладка кирпичей</a></li><li class="last"><a href="services/service-other/service-kamin.html" >Установка электрокаминов</a></li></ul></li><li class="last"><a href="services/service-firm/" >Обслуживание организаций</a></li></ul>
 				</div>
 			</nav>
 		</div>
@@ -108,7 +104,7 @@
 						<p class="block-contact-phone__number"><i>8 (383)</i> 375-02-34<br>8-800-770-02-35 </p>
 						<p class="block-contact-phone__text"><i>Звоните, мы работаем</i> без выходных <b>c</b> 8.00 <b>до</b> 20.00!</p>
 					</div>
-					<button class="btn first-screen__header-btn">Срочный вызов</button>
+					<button class="btn first-screen__header-btn js-call">Срочный вызов</button>
 				</div>
 				<div class="main-title">
 					<p><i>ЛЮБОЙ МЕЛКИЙ</i> БЫТОВОЙ РЕМОНТ В&nbsp;НОВОСИБИРСКЕ С&nbsp;ГАРАНТИЕЙ <i>КАЧЕСТВА</i> по&nbsp;самым&nbsp;низким&nbsp;ценам</p>
@@ -311,7 +307,7 @@
 										</ul>
 									</div>
 									<div class="block-master__btn">
-										<a href="#" class="btn">вызвать мастера</a>
+										<a href="#" class="btn js-master">вызвать мастера</a>
 									</div>
 								</div>
                 	        </li>
@@ -330,7 +326,7 @@
 										</ul>
 									</div>
 									<div class="block-master__btn">
-										<a href="#" class="btn">вызвать мастера</a>
+										<a href="#" class="btn js-master">вызвать мастера</a>
 									</div>
 								</div>
                 	        </li>
@@ -341,15 +337,17 @@
 									<div class="block-master__description">
 										<p class="block-master__name">Сидоров Иван - 3</p>
 										<p class="block-master__experience">мастер-универсал, опыт работы 20 лет</p>
-										<ul class="block-master__work-list blue-list">
+										<div class="block-master__work-list">
+										<ul  blue-list">
 											<li>сантехник, электрик</li>
 											<li>замена замков и личинок</li>
 											<li>навеска предметов, сборка мебели</li>
 											<li>установка бытовой техники</li>
 										</ul>
+										</div>
 									</div>
 									<div class="block-master__btn">
-										<a href="#" class="btn">вызвать мастера</a>
+										<a href="#" class="btn js-master">вызвать мастера</a>
 									</div>
 								</div>
                 	        </li>
@@ -686,49 +684,70 @@
 	<div class="main-nav-scroll">
 		<div class="main-nav-block main-nav--closed">
 			<p class="caps page-header__logo-subtitle mobil">служба мелкого бытового ремонта<br><span>в г. Новосибирске</span></p>
+			<div class="add-nav mobil">
+					<i class="tab-nav js_nav-service">Услуги</i>
+					<i class="tab-nav js_nav-menu">Главное меню</i>
+			</div>
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
 		
 			<nav class="main-nav main-nav--first">
 				<div class="main-nav__wrapper">
-					<ul>
-						<li><a href="contacts.html"><img style="height: 80%; vertical-align: middle;" src="img/logo-w.png" alt=""></a></li>					
-						<li><a href="contacts.html">Контакты</a></li>
-						<li><a href="reviews.html">Отзывы клиентов</a></li>
-						<li><a href="info.html">Информация для клиентов</a></li>
-						
-					</ul>
+				    <ul class=""><li><a href="info/info.html" >Часто задаваемые вопросы</a></li><li><a href="info/conditions.html" >Условия предоставления услуг</a></li><li><a href="info/news-article.html" >Акции! Новости и статьи</a></li><li><a href="info/about.html" >О нас</a></li><li><a href="info/pressa.html" >Пресса о нас</a></li><li><a href="info/vacancy.html" >Вакансии</a></li>
+				    
+				    <li><a href="/supermen/" >Главная</a></li>
+				    
+				    <li><a href="/supermen/" ><img style="height: 80%; vertical-align: middle;" src="img/logo-w.png" alt=""></a></li><li><a href="contacts.html" >Контакты</a></li><li><a href="reviews.html" >Отзывы клиентов</a></li><li><a href="info.html" >Информация для клиентов</a></li></ul>
 				</div>
+				
 			</nav>	
 			<nav class="main-nav  main-nav--last">			
 				<div class="main-nav__wrapper">
-					<ul>
-						<li><a href="service-item.html">Услуги электрика</a></li>
-						<li><a href="service-item.html">Услуги сантехника</a></li>
-						<li><a href="service-lock.html">Замена замка</a></li>
-						<li><a href="service-naves.html">Навеска предметов интерьера</a></li>
-						<li><a href="service-tech.html">Установка бытовой техники</a></li>
-						<li><a href="service-meb.html">Сборка/разборка мебели</a></li>
-						<li><a href="service-rem.html">Косметический ремонт</a></li>
-						<li><a href="service-other.html">Прочие услуги</a></li>
-						<li><a href="service-firm.html">Обслуживание организаций</a></li>
-					</ul>
+				    <ul class=""><li class="first"><a href="services/service-electric/" >Услуги электрика</a></li><li><a href="services/service-santech/" >Услуги сантехника</a></li><li><a href="services/service-lock/" >Установка и ремонт замков</a></li><li><a href="services/service-naves/" >Навеска предметов интерьера</a></li><li><a href="services/service-tech/" >Установка бытовой техники</a></li><li><a href="services/service-meb/" >Сборка/разборка мебели</a></li><li><a href="services/service-rem/" >Косметический ремонт</a><ul class=""><li class="first"><a href="services/service-rem/service-pol.html" >Укладка пола</a></li><li><a href="services/service-rem/service-oboi.html" >Поклейка обоев</a></li><li><a href="services/service-rem/service-okno.html" >Ремонт окон</a></li><li><a href="services/service-rem/service-balkon.html" >Обустройство балконов, кладовок</a></li><li><a href="services/service-rem/service-dver.html" >Установка дверей</a></li><li><a href="services/service-rem/service-malar.html" >Малярные работы</a></li><li><a href="services/service-rem/service-kafel.html" >Укладка кафельной плитки</a></li><li class="last"><a href="services/service-rem/service-potolok.html" >Ремонт потолков</a></li></ul></li><li><a href="services/service-other/" >Прочие услуги</a><ul class=""><li class="first"><a href="services/service-other/service-rem-tech.html" >Ремонт бытовой техники</a></li><li><a href="services/service-other/service-svarka.html" >Сварочные работы</a></li><li><a href="services/service-other/service-brick.html" >Кладка кирпичей</a></li><li class="last"><a href="services/service-other/service-kamin.html" >Установка электрокаминов</a></li></ul></li><li class="last"><a href="services/service-firm/" >Обслуживание организаций</a></li></ul>
 				</div>
 			</nav>
 		</div>
 	</div>
 
 <!-- ************** БЛОК МОДАЛЬНЫЕ ОКНА ******************- -->
+<div class="modal_wrapper">  </div>
 
+	<div class="modal more">
+	  <div class="frame_color">
+	  	<div class="img-men"></div>
+	    <button class="modal_close" type="button">Закрыть</button>
+	    <h2 id="modal_txt">Заголовок</h2>
+	    <span id="modal_manager">Менеджер перезвонит Вам<br> в течение 15 минут</span>
+	    <form method="post">    
+	      	<input type="text" class="user-input user-input--block-modal required" id="user_name_modal" name="user-name" placeholder="Имя" >
+	       	<input type="tel" class="user-input user-input--block-modal required" id="user_phone_modal" name="user-phone" placeholder="Телефон" >	       
+	    	<button class="btn btn--form-modal" type="submit" id="btn_form_modal">Получить консультацию</button>    
+	      	<input type="text" class="form_text_hide" name="text">
+	    </form>
+	    
+	  </div>
+	</div>
+
+	<div style="display: none;">
+	    <div class="box-modal" id="exampleModal">
+	      <div class="frame_blue">        
+	        <div class="box-modal_close arcticmodal-close">x</div>
+	        <h3>Спасибо за заявку!</h3>
+	        <hr>
+	        <p>Мы свяжемся с Вами в ближайшее время.</p>
+	      </div>
+	    </div>
+	</div>
+<!-- ********************************- -->
 
 <!-- ********************************- -->
 </div> <!-- end wrapper-x -->
 
 <script src="js/menu.js"> </script>
 <!--<script src="js/prev-video.js"> </script>		
-	
+-->	
 <script src="js/modal.js"> </script>
 <script src="js/post.js"> </script>
--->
+
 
 
 </body>

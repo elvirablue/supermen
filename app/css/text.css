@@ -1,135 +1,164 @@
 
-	* {
-		color: #2d2d2d;
-		margin-bottom: 15px;
-	}
+* {
+	font-family: Arial, sans-serif;
+	color: #2d2d2d;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
 
-	i {
-		font-style: italic;
-	}
+p {
+	font-size: 16px;
+}
 
-	ul {
-		display: block !important;
-		list-style: none !important;
-		text-align: left !important;
-		margin-left: 20px;
+b {
+	font-weight: 600;
+	color: red;
+}
+
+i {
+	font-style: italic;
+}
+
+ ul.list-circle {
+	display: block;
+	list-style: none;
+	text-align: left;
+	margin-left: 20px;
+	width: 800px;
 }
 		
 
- ul li {
-			display: block !important;
-			width: auto !important;
-			padding-left: 25px;
-			font-family: "RobotoBold", sans-serif;
-  			font-size: 16px; 
-			font-weight: normal;
-			line-height: 1.5;
-			white-space: normal !important;
-			position: relative;
+ ul.list-circle li {
+	display: block;
+	width: auto ;
+	padding-left: 25px;
+	font-family: Arial, sans-serif;
+  	font-size: 16px; 
+	font-weight: normal;
+	line-height: 1.5;
+	white-space: normal;
+	position: relative;
 }
 	
 
-ul li:before {
-			content: "";
-			display: inline-block;
-			position: absolute;
-			top: 5px;
-			left: 0;
-			width: 10px;
-			height: 10px;
-			
-			font-size: 0;
-			background-color: #02a0e3;
-			border-radius: 50%;
-			box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
-		}
-
-.drop-down-list {
-	display: block;
-	width: 100%; 
-	padding: 50px 0;
-	position: relative;
+ ul.list-circle li:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	
+	font-size: 0;
+	background-color: #02a0e3;
+	border-radius: 50%;
+	box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
 }
-.drop-down-list	ul {
-		display: block;
-		width: 100%;
+
+
+
+
+ ul.service-head {
+	list-style: none;
+	padding-top: 20px;			
+	text-align: left;
+
+}
+			
+
+ul.service-head li {
+	padding: 0px;
+	padding-left: 30px;
+	position: relative;
+	font-size: 16px;
+}
+
+ul.service-head li:before {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	content: "\2714";
+	color: #02a0e3;
+	font-size: 30px;
+}
 		
-		list-style: none;
-	}
-.drop-down-list ul > li {
-			display: block;
-			color: #ffffff;
-			text-align: left;
+
+
+
+
+ul.drop-down-list-blue {
+	display: block;
+	width: 70%;		
+	list-style: none;
+}
+
+ ul.drop-down-list-blue > li {
+	display: block;
+	color: #ffffff;
+	text-align: left;
+	height: auto;	
+}
+
+ ul.drop-down-list-blue > li > p {
+	padding: 15px 20px;	
+	color: #ffffff;			
+	background-color: #02a0e3;
+	border-bottom: 1px solid #ffffff;
+}
 			
-			height: auto;
-			cursor: pointer;
-		}
-.drop-down-list ul > li > p {
-				padding: 15px 20px;				
-				background-color: @color-blue;
-				border-bottom: 1px solid #ffffff;
-			}
-			
 
-.drop-down-list ul > li > ul {
-			
-				display: block;
-				list-style: none;
-				padding: 10px 0;
-			}
+ ul.drop-down-list-blue > li > ul {
+	display: block;
+	list-style: none;
+	padding: 10px 0;
+}
 
 
-.drop-down-list ul > li > ul > li {
-					display: block;					
-					border-bottom: none;
-				}					
+ ul.drop-down-list-blue > li > ul > li {
+	display: block;					
+	border-bottom: none;
+}					
 
-.drop-down-list ul > li > ul > li * {
-						color: @color-gray;
-						padding: 0 10px;
-						background-color: #ffffff;
-						line-height: 1.2;
-						padding-bottom: 15px;
-						text-align: justify;
-					}
+ ul.drop-down-list-blue > li > ul > li * {
+	color: #2d2d2d;
+	padding: 0 10px;
+	background-color: #ffffff;
+	line-height: 1.2;
+	padding-bottom: 15px;
+	text-align: justify;
+}
 				
 
 
 
 		
 
-.drop-down-list	table {
-			width: 100%;
-		}
-		.drop-down-list	tr td {
-				height: auto;
-				padding: 10px;
-				vertical-align: middle;
-			}
+ table.drop-down-table {
+	width: 100%;
+}
+table.drop-down-table tr td {
+	height: auto;
+	padding: 10px;
+	vertical-align: middle;
+}
 
-		.drop-down-list	tr td {
-				text-align: right;
-			}
+table.drop-down-table tr td {
+	text-align: right;
+}
 
-		.drop-down-list	tr td:first-child {
-				width: 70%;
-				text-align: left;
-			}
+table.drop-down-table tr td:first-child {
+	width: 70%;
+	text-align: left;
 
-		.drop-down-list	tr:nth-child(even) td {
-				background-color: #e8e8e8;
-			}
-	
 
-.drop-down-list	ul > li > p:before {
-			content: "►";
-			display: inline-block;
-			margin-right: 8px;
-		}
+table.drop-down-table tr:nth-child(even) td {
+	background-color: #e8e8e8;
+}
 
-	
 
-	
-
-	
-
+table.drop-down-tableul > li > p:before {
+	content: "►";
+	display: inline-block;
+	margin-right: 8px;
+}

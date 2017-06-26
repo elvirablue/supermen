@@ -4,14 +4,12 @@ if(!empty($_POST["user-phone"])) {
 	$name = $_POST["user-name"];
 	$phone = $_POST["user-phone"];
 	$text = $_POST["text"];
-	$usertext = $_POST["user-text"];
-	$mail = $_POST["user-mail"];
 	$ip = $_SERVER["REMOTE_ADDR"];
 	
 	
 	$to = "olga_tretyakova@mail.ru"; //
 
-	$titleMail = 'Заявка с сайта Кависта';
+	$titleMail = 'Заявка с сайта "СуперМуж на ЧАС"';
 	$message = '
 		<table style="font-family: arial ;">
 		<tr style="border: 1px solid black;">
@@ -26,14 +24,7 @@ if(!empty($_POST["user-phone"])) {
 				<td style="padding: 10px; font-weight: bold; font-size: 16px;">Телефон:</td>
 				<td style="padding: 10px; font-size: 12px;">'.$phone.'</td>
 			</tr>
-			<tr style="border: 1px solid black;">
-				<td style="padding: 10px; font-weight: bold; font-size: 16px;">E-mail:</td>
-				<td style="padding: 10px; font-size: 12px;">'.$mail.'</td>
-			</tr>
-			<tr style="border: 1px solid black;">
-				<td style="padding: 10px; font-weight: bold; font-size: 16px;">Текст сообщения:</td>
-				<td style="padding: 10px; font-size: 12px;">'.$usertext.'</td>
-			</tr>
+			
 			<tr style="border: 1px solid black;">
 				<td style="padding: 10px; font-weight: bold; font-size: 16px;">IP:</td>
 				<td style="padding: 10px; font-size: 12px;">'.$ip.'</td>
@@ -42,7 +33,7 @@ if(!empty($_POST["user-phone"])) {
 		</table>
 	';
 
-	mail($to, $titleMail, $message, "MIME-Version: 1.0\nContent-type: text/html; charset=utf-8\nFrom: kavista.ru - заполнена форма!");
+	mail($to, $titleMail, $message, "MIME-Version: 1.0\nContent-type: text/html; charset=utf-8\nFrom: supermen.ru - заполнена форма!");
 
 } else return false;
 

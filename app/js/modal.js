@@ -2,9 +2,7 @@
 $(document).on('ready', function(){ 
 //******************модальные окна для форм**************************************************
 //
-//    var link_kitel = document.querySelector('#kitel');     
-     
-   // $("#user_phone_modal").mask("+7 (999) 999-9999");
+
     $("input[name^='user-phone']").mask("+7 (999) 999-9999");
 
     var popup_wrapper = document.querySelector('.modal_wrapper');
@@ -12,9 +10,7 @@ $(document).on('ready', function(){
     var close = popup.querySelector('.modal_close');
     var form = popup.querySelector('form');
     var name = popup.querySelector('[name=user-name]');  
-    var phone = popup.querySelector('[name=user-phone]');
-    var mail = popup.querySelector('[name=user-mail]');
-    var text = popup.querySelector('[name=user-text]');
+    var phone = popup.querySelector('[name=user-phone]');    
     var text_hide = popup.querySelector('[name=text]');
     var text_manager = popup.querySelector('#modal_manager');
 
@@ -45,35 +41,38 @@ $(document).on('ready', function(){
       }
     };
 
-    if (document.querySelector('#js-write')) {
+    if (document.querySelector('.js-call')) {
 
-      document.querySelector('#js-write').addEventListener('click', function(event){
-        event.preventDefault();   
-        phone.style.display='none';
-        phone.classList.remove('required');
-        name.style.display='block';
-        mail.style.display='block';
-        text.style.display='block';
-        text_manager.innerHTML = 'Менеджер ответит Вам<br> в течение рабочего дня';      
-        title.innerText = text_hide.value = 'Напишите нам';
-        btn_value.innerText = 'Отправить';
+      $('.js-call').click(function(event){
+        event.preventDefault();  
+        
+        text_manager.innerHTML = 'Оставьте Ваш телефон, оператор<br>перезвонит в самое ближайшее время';      
+        title.innerText = text_hide.value = 'Срочный вызов';
+        btn_value.innerText = 'Срочный вызов';
         PopupShow(event);
       });
     };
 
-     if (document.querySelector('#js-call')) {
+    if (document.querySelector('.js-master')) {
 
-      document.querySelector('#js-call').addEventListener('click', function(event){
+      $('.js-master').click(function(event){
         event.preventDefault();   
-        phone.style.display='block';
-        name.style.display='block';
-        mail.style.display='none';
-        mail.classList.remove('required');
-        text.style.display='none';
-        text.classList.remove('required');
-        text_manager.innerHTML = 'Менеджер перезвонит Вам<br> в течение 15 минут' ;         
-        title.innerText = text_hide.value = 'Заказать звонок';
-        btn_value.innerText = 'Отправить';
+        
+        text_manager.innerHTML = 'Оставьте Ваш телефон, оператор перезвонит и<br> согласует удобное время приезда мастера';         
+        title.innerText = text_hide.value = 'Вызов мастера';
+        btn_value.innerText = 'Вызвать мастера';
+        PopupShow(event);
+      });
+    };
+
+    if (document.querySelector('.js-consult')) {
+
+      $('.js-consult').click(function(event){
+        event.preventDefault();   
+        
+        text_manager.innerHTML = 'Оставьте Ваш телефон, оператор перезвонит и<br> проконсультирует Вас по услугам и стоимости';         
+        title.innerText = text_hide.value = 'Консультация';
+        btn_value.innerText = 'Получить консультацию';
         PopupShow(event);
       });
     };
