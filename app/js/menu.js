@@ -30,15 +30,21 @@ $(document).on('ready', function(){
     event.preventDefault();   
     if ($(this).hasClass('active')) return;
     if (!$('.js_nav-service').hasClass('active') && !$('.js_nav-menu').hasClass('active')) {
-      $(this).addClass('active');
+      if ($(this).hasClass('js_nav-menu')) {
+        $('.js_nav-menu').addClass('active');
+      }
+      if ($(this).hasClass('js_nav-service')) {
+        $('.js_nav-service').addClass('active');
+      }
       $('.main-nav-block').toggleClass('main-nav--closed');
       $('.main-nav-block').toggleClass('main-nav--opened'); 
 
 
 
     } else {
-      $('.js_nav-service').toggleClass('active');
-      $('.js_nav-menu').toggleClass('active');
+       $('.js_nav-menu').toggleClass('active');
+       $('.js_nav-service').toggleClass('active');
+     
       if ($('.js_nav-menu').hasClass('active')) {
         $('.main-nav--first').css('display', 'block');
         $('.main-nav--last').css('display', 'none');

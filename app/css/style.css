@@ -1040,7 +1040,7 @@ ul.list-circle li:before {
   font-size: 14px;
 }
 .page-footer__nav-collumn:first-child {
-  width: 54%;
+  width: 52%;
 }
 .page-footer__nav-collumn:last-child ul > li > ul {
   display: none;
@@ -1813,6 +1813,7 @@ ul.list-circle li:before {
   .first-screen__form-comment {
     width: 100%;
     top: -75px;
+    height: 100px;
   }
   .first-screen__header.mobil {
     display: block;
@@ -3522,7 +3523,7 @@ ul.list-circle li:before {
   font-weight: bold;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  margin-left: -4px;
+  margin-left: -7px;
   background-color: #ffffff;
 }
 .block-noimg__content {
