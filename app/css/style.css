@@ -258,6 +258,26 @@ ul.list-circle li:before {
   background-position: center;
   border: 1px dashed gray;
 }
+.block-logo {
+  width: 20%;
+  height: 100px;
+  margin: 2%;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 1024px) {
+  .block-logo {
+    height: 70px;
+  }
+}
+@media (max-width: 765px) {
+  .block-logo {
+    width: 135px;
+    height: 50px;
+  }
+}
 .person-data {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
@@ -2224,11 +2244,6 @@ ul.list-circle li:before {
   .main-services__block-logo {
     padding: 30px 0;
   }
-  .main-services__logo {
-    width: 20vw;
-    height: 20vw;
-    margin: 1vw;
-  }
 }
 .other {
   background: url("../img/line-shadow-block.png") bottom center no-repeat #ffffff;
@@ -3011,6 +3026,9 @@ ul.list-circle li:before {
   padding: 20px 0;
 }
 .block-rubric__link {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
   display: block;
   color: #02a0e3;
   text-decoration: underline;
